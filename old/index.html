@@ -1,0 +1,167 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Manoj Mardithaya | Computer Science and Engineering, University of California San Diego</title>
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700|Vollkorn:400italic, 400' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-28232463-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+<script type="text/javascript">
+	// Cross-browser implementation of element.addEventListener()
+	// Source: http://stackoverflow.com/questions/559150/best-practice-for-using-window-onload
+	function listen(evnt, elem, func) {
+		if (elem.addEventListener)  // W3C DOM
+			elem.addEventListener(evnt,func,false);
+		else if (elem.attachEvent) { // IE DOM
+			var r = elem.attachEvent("on"+evnt, func);
+			return r;
+		}
+	}
+	listen("load", window, function(){
+		document.getElementById('email').innerHTML = "m" + "mardith" + "@cs.ucsd" + ".edu";
+		document.getElementById('cpright').innerHTML = "&copy; "+(new Date()).getFullYear()+", Manoj Mardithaya";
+		choosecurrent();
+	});
+	function choosecurrent(indx)
+	{
+		if(indx == null)
+		{
+			var tabs = document.getElementsByClassName("navitem normal big");
+			var special = document.getElementById("#Projects");
+			switch(location.hash)
+			{
+				case "#Academics":
+					special = tabs[1].firstChild;
+					break;
+				case "#Misc":
+					special = tabs[2].firstChild;
+			}
+			special.className += " active";
+		}else {
+			var tabs = document.getElementsByClassName("navitem normal big");
+			for(var i=0; i<tabs.length; i++)
+			{
+				tabs[i].firstChild.className = 
+					tabs[i].firstChild.className.replace( /(?:^|\s)active(?!\S)/ , '' )
+			}
+			tabs[indx].firstChild.className += " active";
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<div class='major big bold'>
+		<div>Manoj Mardithaya</div>
+		<!--<img src="desat.png" width="225px" height="300px"/>-->
+	</div>
+	<div class='major big'>
+		<div>
+			<span class='normal'>Masters Student @ UCSD since </span>
+			<span class='emph'>Fall 2011</span>
+		</div>
+	</div>
+	<div class='major small'>
+		<span class='normal'>I love to write. Code, Novels, Rants...</span><br />
+		<span class='emph tiny'>not documentation though - who loves that?!</span><br />
+		<span class='normal spaced'>If you want to talk, you can reach me at</span>
+		<span class='emph tiny' id='email'>m&lt;7 letters of my last name&gt; at csDOTucsd</span>
+	</div>
+	<br />
+	<div class='content'>
+		<ul class='nav'>
+			<li class='navitem normal big'><a href='#Projects' id='#Projects' onclick="choosecurrent(0)">Projects</a></li>
+			<li class='navitem normal big'><a href='#Academics' id='#Academics' onclick="choosecurrent(1)">Academics</a></li>
+			<li class='navitem normal big'><a href='#Misc' id='#Misc' onclick="choosecurrent(2)">Misc.</a></li>
+		</ul>
+	
+		<section class='box' id='Academics'>
+			<div class='minor emph'>
+				<div class='big'>UCSD</div>
+				Fall 2011 - current. Concentration: Computer Science (Architecture).<br />
+				GPA: 4.0<br />
+				Coursework:<br />
+				<ul>
+					<li><a href='http://cseweb.ucsd.edu/classes/fa11/cse221-a/' target='_blank'>
+						CSE 221: Operating Systems</a></li>
+					<li><a href='http://cseweb.ucsd.edu/classes/fa11/cse231-a/' target='_blank'>
+						CSE 231: Advanced Compilers</a></li>
+					<li><a href='http://cseweb.ucsd.edu/classes/fa11/cse240A-a/' target='_blank'>
+						CSE 240A: Graduate Computer Architecture</a></li>
+				</ul>
+			</div>
+			<div class='minor emph'>
+				<div class='big'>NITK</div>
+				Jul 2007 - Apr 2011. B.Tech. in Computer Engineering.<br />
+				GPA: 8.92 / 10<br />
+				President of the <a href='https://plus.google.com/100608622205443120466' target='_blank'>
+					Web Enthusiasts' Club</a>, 2010-2011<br />
+				Special Interest Group Coordinator for 
+					<a href='http://ewh.ieee.org/sb/bangalore/nitk/site/python.php' target='_blank'>
+					Python, NITK IEEE Student Branch</a>, 2009-2011<br />
+			</div>
+			<div class='minor emph'>
+				<div class='small'><a href='http://www.mvhs.fuhsd.org/' target='_blank'>Monta Vista High School</a></div>
+				I know. I've listed my high school here because I feel it deserves an
+				equal share of credit in making me who I am today. Special mention to
+				<a href='http://www.mvrt.com/' target='_blank'>MVRT 115</a> (our Robotics Team).
+			</div>
+		</section>
+		<section class='box' id='Misc'>
+			<div class='major emph'>There is plenty of debris on the internet. 
+				What you can't find with <a href='https://www.google.com/search?q=%22Manoj%20Mardithaya%22' target='_blank'>
+				my name</a>  you can probably find with 
+				<a href='https://www.google.com/search?q=%22Vanwaril%22' target='_blank'>my psuedonym</a>.
+			</div>
+			<div class='major big emph space'>Happy Stalking!</div>
+		</section>
+		<section class='box' id='Projects'>
+			<div class='major emph'>This is what you came here to see, right?</div>
+			<div class='minor'>
+				<span class='bold small'>A Framework for Discretized Anomaly-Based 
+				SQL Injection Detection</span><br />
+				<div class='normal spaced'>SQL injection is easy to prevent with a bit of
+					thought and some language constructs. Modifying tons of old code is not. 
+					The goal of the project was to devise a runtime framework that can
+					easily be trained to prevent SQL injection, and more accurate than 
+					existing solutions by correlating HTTP Requests with queries.
+					<span class='emph'>Undergraduate thesis at 
+					<a href='http://en.wikipedia.org/wiki/National_Institute_of_Technology_Karnataka' target='_blank'>
+					NITK - Surathkal</a> - Jul 2010-Apr 2011</span>
+				</div>
+			</div>
+			<div class='minor'>
+				<span class="bold small">Linux Fast Boot</span><br />
+				<div class="normal spaced">Optimized Fedora 13 on HS22 server systems to boot
+					in under 5s. Minified kernel, a few driver/scsi bus hacks, plenty of
+					user-level service parallelism (using Upstart) &mdash; the works.
+					<span class='emph'>Intern, <a href='http://www-03.ibm.com/linux/ltc/' target='_blank'>IBM Linux 
+					Technology Center, Bangalore</a> - Summer 2010</span>
+				</div>
+			</div>
+			<div class='minor'>
+				<span class='bold small'><a href='http://polluxapp.com' target='_blank'>Pollux</a></span><br />
+				<div class='normal spaced'><span class='emph'>Music organization meets 
+					automation</span>: a desktop application for Mac OSX and Windows to 
+					work with iTunes and various internet music databases to automatically 
+					find metadata for your music. - <span class='emph'>Jan 2010</span>
+				</div>
+			</div>
+			</section>
+		</div>
+	</div>
+	<div id="cpright" class='emph tiny'>&copy; 2011, Manoj Mardithaya</div>
+</body>
+</html>
